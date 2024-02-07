@@ -2,6 +2,7 @@ const movie = document.querySelector('.movie');
 const btn = document.querySelector('.btn');
 const movieImg = document.querySelector(".movie-img");
 const about = document.querySelector(".about");
+const movieContainer = document.querySelector(".movie-container");
 
 function fetchMovie() {
   const apiKey = "9441b010fb2bf7ea1349af61a258887b";
@@ -27,6 +28,12 @@ function chooseMovie() {
           movieImg.classList.add("active");
         }
         about.innerText = randomMovie.overview;
+
+        // Adiciona a classe e, em seguida, remove após 300ms
+        movieContainer.classList.add("scale-up");
+        setTimeout(() => {
+          movieContainer.classList.remove("scale-up");
+        }, 300);
       } else {
         movie.innerText = "Algum erro ocorreu";
       }
@@ -35,5 +42,6 @@ function chooseMovie() {
       movie.innerText = 'Erro ao obter filmes.';
     });
 }
+
 
 btn.addEventListener("click", chooseMovie);

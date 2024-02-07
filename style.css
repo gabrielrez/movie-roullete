@@ -63,6 +63,7 @@ span {
   grid-template-columns: 1.5fr 1fr;
   justify-content: center;
   align-items: center;
+  transition: 0.2s ease;
 }
 
 .sideA {
@@ -80,4 +81,9 @@ span {
 .movie-img.active {
   border: 2px solid #000000;
   box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.scale-up {
+  opacity: 0;
+  transition: transform 0.2s ease;
 }
