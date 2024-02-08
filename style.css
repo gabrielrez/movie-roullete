@@ -55,10 +55,42 @@ span {
   background-color: #f12c29;
 }
 
+.tags {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tag {
+  background-color: #F8312F;
+  border: 2px solid #000000;
+  color: #F4F4F4;
+  padding: 4px 12px;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tag:hover {
+  background-color: #eb2522;
+}
+
+.tag.active {
+  background-color: #F4F4F4;
+  color: #000000;
+}
+
 .movie-container {
   margin-top: 40px;
   padding-top: 40px;
   border-top: 2px solid #000000;
+  padding-bottom: 40px;
+}
+
+.movie-box {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   justify-content: center;
@@ -85,5 +117,6 @@ span {
 
 .scale-up {
   opacity: 0;
+  scale: 0.95;
   transition: transform 0.2s ease;
 }

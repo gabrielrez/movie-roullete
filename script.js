@@ -2,7 +2,8 @@ const movie = document.querySelector('.movie');
 const btn = document.querySelector('.btn');
 const movieImg = document.querySelector(".movie-img");
 const about = document.querySelector(".about");
-const movieContainer = document.querySelector(".movie-container");
+const movieContainer = document.querySelector(".movie-box");
+const tags = document.querySelectorAll(".tag");
 
 function fetchMovie() {
   const apiKey = "9441b010fb2bf7ea1349af61a258887b";
@@ -29,7 +30,6 @@ function chooseMovie() {
         }
         about.innerText = randomMovie.overview;
 
-        // Adiciona a classe e, em seguida, remove após 300ms
         movieContainer.classList.add("scale-up");
         setTimeout(() => {
           movieContainer.classList.remove("scale-up");
@@ -45,3 +45,8 @@ function chooseMovie() {
 
 
 btn.addEventListener("click", chooseMovie);
+tags.forEach((tag) => {
+  tag.addEventListener("click", function () {
+    this.classList.toggle("active");
+  })
+})
