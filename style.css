@@ -12,16 +12,21 @@ body {
 }
 
 h1 {
+  font-size: 2.5rem;
   font-weight: 600;
   text-align: center;
 }
 
-span {
+.detail {
   color: #F8312F;
 }
 
+h1 span {
+  font-size: 2rem;
+}
+
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
@@ -105,9 +110,17 @@ span {
   gap: 12px;
 }
 
-.movie {
+.movie-title {
+  margin-top: 10px;
   font-size: 1.125rem;
   font-weight: 600;
+  line-height: 1;
+}
+
+.movie-date {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .movie-img.active {
