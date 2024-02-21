@@ -133,3 +133,17 @@ h1 span {
   scale: 0.95;
   transition: transform 0.2s ease;
 }
+
+@media(max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .movie-box {
+    display: block;
+  }
+
+  .sideB {
+    margin-top: 32px;
+  }
+}
