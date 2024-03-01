@@ -54,7 +54,6 @@ h1 span {
 }
 
 .btn:hover {
-  /* scale: 0.95; */
   transform: translate3d(4px, 4px, 0);
   box-shadow: 4px 4px 0px 0px #000000;
   background-color: #f12c29;

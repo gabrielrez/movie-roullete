@@ -4,6 +4,7 @@ const btn = document.querySelector('.btn');
 const movieImg = document.querySelector(".movie-img");
 const about = document.querySelector(".about");
 const movieContainer = document.querySelector(".movie-box");
+const events = ["click", "touchstart"];
 // const tags = document.querySelectorAll(".tag");
 
 function fetchMovie() {
@@ -48,7 +49,10 @@ function chooseMovie() {
 }
 
 
-btn.addEventListener("click", chooseMovie);
+events.forEach((event) => {
+  btn.addEventListener(event, chooseMovie);
+})
+
 // tags.forEach((tag) => {
 //   tag.addEventListener("click", function () {
 //     this.classList.toggle("active");
